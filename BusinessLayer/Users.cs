@@ -10,7 +10,7 @@ namespace BussinessModel
         [Required]
         [Column(TypeName = "Nvarchar(100)")]
         public string Username { get; set; }
-
+        public string UserName { get; set; }
         [Column(TypeName = "Nvarchar(300)")]
         public string UserAddress { get; set; }
 

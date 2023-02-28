@@ -5,9 +5,11 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping_center", "Shopping_center\Shopping_center.csproj", "{02F3228E-502E-4451-9AFE-D7EDEC568C19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinessModel", "BusinessLayer\BussinessModel.csproj", "{C412180F-4794-47EC-8D37-C0D4EEE0F8FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BussinessModel", "BusinessLayer\BussinessModel.csproj", "{C412180F-4794-47EC-8D37-C0D4EEE0F8FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.DataAccessLayer", "Shopping.DataAccessLayer\Shopping.DataAccessLayer.csproj", "{C77EEC2E-44B2-4088-826A-7159FFE62D57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping.DataAccessLayer", "Shopping.DataAccessLayer\Shopping.DataAccessLayer.csproj", "{C77EEC2E-44B2-4088-826A-7159FFE62D57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunitShopping_center.Test", "xunitShopping_center.Test\xunitShopping_center.Test.csproj", "{5631F6FD-672B-4CE2-921B-47CF9BF9AD22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C77EEC2E-44B2-4088-826A-7159FFE62D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C77EEC2E-44B2-4088-826A-7159FFE62D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C77EEC2E-44B2-4088-826A-7159FFE62D57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5631F6FD-672B-4CE2-921B-47CF9BF9AD22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5631F6FD-672B-4CE2-921B-47CF9BF9AD22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5631F6FD-672B-4CE2-921B-47CF9BF9AD22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5631F6FD-672B-4CE2-921B-47CF9BF9AD22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

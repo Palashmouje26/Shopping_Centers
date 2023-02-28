@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
 using BussinessModel;
+using AutoMapper;
 
 namespace Shopping_center.Controllers
 {
@@ -16,10 +17,13 @@ namespace Shopping_center.Controllers
 
         private readonly ProductDBContext _dbContext;
 
+        private readonly IMapper _mapper;
 
-        public UserController(ProductDBContext dbContext)
+
+        public UserController(ProductDBContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
+            _mapper = mapper;
         }
 
         //Get Method//   

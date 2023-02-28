@@ -32,7 +32,7 @@ namespace Shopping_center
 
             services.AddDbContext<ProductDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
             services.AddScoped<IProductDataRepository ,ProductDataRepository>();
-            
+            services.AddAutoMapper(typeof(Startup)) ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

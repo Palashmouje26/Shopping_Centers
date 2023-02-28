@@ -11,6 +11,7 @@ using Microsoft.CodeAnalysis;
 using Shopping_center.Repository;
 using Shopping_center.Models;
 using BussinessModel;
+using AutoMapper;
 
 namespace Shopping.DataAccessLayer.Controllers
 {
@@ -21,14 +22,20 @@ namespace Shopping.DataAccessLayer.Controllers
 
         private readonly ProductDBContext _dbContext;
 
-        private readonly IWebHostEnvironment WebHostEnvironment;
-        private readonly IProductDataRepository _productDataRepository;
+       
 
-        public ProductController(ProductDBContext dbContext, IWebHostEnvironment webHostEnvironment , IProductDataRepository productDataRepository)
+        private readonly IWebHostEnvironment WebHostEnvironment;
+        
+        private readonly IProductDataRepository _productDataRepository;
+       
+        private readonly IMapper _mapper;
+
+        public ProductController(ProductDBContext dbContext, IWebHostEnvironment webHostEnvironment , IProductDataRepository productDataRepository,IMapper mapper)
         {
             _dbContext = dbContext;
             WebHostEnvironment = webHostEnvironment;
             _productDataRepository = productDataRepository;
+            _mapper = mapper;
         }
 
         //Get Method//
@@ -59,6 +66,7 @@ namespace Shopping.DataAccessLayer.Controllers
         [HttpPost]
         public async Task<ActionResult<Products>> PostProducts(Products products)
         {
+            var product = _mapper.Map<Products>(products);
             _dbContext.Products.Add(products);
             await _dbContext.SaveChangesAsync();
 
